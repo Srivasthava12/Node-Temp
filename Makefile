@@ -18,7 +18,14 @@ build:
 	docker build -t srivasthava/nodetemp_app:v2 .
 
 
-# ----------Push it to DockerHub ----------
+# ---------- Push it to DockerHub ----------
 
 push:
 	docker push srivasthava/nodetemp_app:v2
+
+# ---------- After Test -----------------
+
+deploy:
+	build
+	echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+	push
