@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.com/Srivasthava12/Node-Temp.svg?branch=master)](https://travis-ci.com/Srivasthava12/Node-Temp)
+[![Build Status](https://travis-ci.com/Srivasthava12/node-auth.svg?branch=master)](https://travis-ci.com/Srivasthava12/node-auth)
