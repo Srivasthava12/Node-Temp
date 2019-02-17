@@ -6,6 +6,9 @@ node_js:
 script:
   - make test
 after_success:
-  - make deploy
+  - make build
+  # login for dockerhub
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - make push
 
   
