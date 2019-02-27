@@ -5,10 +5,15 @@ node_js:
   - "stable"
 script:
   - make build-agent
-after_success:
-  - make build
-  # login for dockerhub
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - make push
-
+# after_success:
+#   - make build
+#   # login for dockerhub
+#   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+#   - make push
+deploy:
+  provider: heroku
+  api_key: "$HEROKU_API_KEY"
+  run:
+    - make build
+    - make push
   
