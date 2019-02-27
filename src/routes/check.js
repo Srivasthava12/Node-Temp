@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     const status = {
-        status:"All Set To Gooooo!!!!!"
+        status:"Ready"
     }
     res.send(status)
 });
