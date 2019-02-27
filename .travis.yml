@@ -13,5 +13,5 @@ script:
 after_success:
   - curl https://cli-assets.heroku.com/install.sh | sh
   - heroku container:login
-  - make build
-  - make push
+  - heroku container:push -a node-temp-app web
+  - heroku container:release -a node-temp-app web
