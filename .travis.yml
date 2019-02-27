@@ -11,5 +11,7 @@ node_js:
 script:
   - make build-agent
 after_success:
+  - curl https://cli-assets.heroku.com/install.sh | sh
+  - heroku container:login
   - make build
   - make push
