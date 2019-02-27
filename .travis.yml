@@ -4,7 +4,7 @@ services:
 node_js:
   - "stable"
 script:
-  - make test
+  - make build-agent
 after_success:
   - make build
   # login for dockerhub

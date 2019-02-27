@@ -1,3 +1,6 @@
+include env_config
+include .env
+
 default: build
 
 dc-build:
@@ -15,10 +18,16 @@ test: dc-build
 	docker-compose run  app run test
 
 build:
-	docker build -t srivasthava/nodetemp_app:v2 .
+	docker build -t $(REGISTRY)$(SERVICE_NAME) .
 
 
 # ---------- Push it to DockerHub ----------
 
 push:
-	docker push srivasthava/nodetemp_app:v2
+	docker push $(REGISTRY)$(SERVICE_NAME)
+
+# ------------Build-agent ----------------
+
+build-agent: dc-build
+	docker-compose run app run lint
+	docker-compose run app run coverage

@@ -35,3 +35,6 @@ jspm_packages/
 
 # Output of 'npm pack'
 *.tgz
+
+# nyc optput files
+*.nyc_output

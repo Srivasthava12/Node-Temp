@@ -1,0 +1,2 @@
+REGISTRY=srivasthava/
+SERVICE_NAME=nodetemp_app:v2
