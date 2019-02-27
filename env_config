@@ -1,2 +1,2 @@
 REGISTRY=registry.heroku.com/
-SERVICE_NAME=nodetemp_app
+SERVICE_NAME=node-temp-app
