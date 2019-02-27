@@ -1,6 +1,8 @@
 language: node_js
 services:
   - docker
+before_install:
+  - docker login --username=_ --password=$(HEROKU_API_KEY) registry.heroku.com
 node_js:
   - "stable"
 script:
@@ -11,9 +13,8 @@ script:
 #   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 #   - make push
 deploy:
-  provider: heroku
-  api_key: "$HEROKU_API_KEY"
-  run:
-    - make build
-    - make push
+  provider: script
+  script:
+  - make build
+  - make push
   
