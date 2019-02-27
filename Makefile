@@ -20,12 +20,6 @@ test: dc-build
 build:
 	docker build -t $(REGISTRY)$(SERVICE_NAME) .
 
-
-# ---------- Push it to DockerHub ----------
-
-push:
-	docker push $(REGISTRY)$(SERVICE_NAME)
-
 # ------------Build-agent ----------------
 
 build-agent: dc-build

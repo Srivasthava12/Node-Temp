@@ -3,6 +3,10 @@
 	"version": "1.0.0",
 	"description": "Node Templete",
 	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Srivasthava12/node-temp.git"
+	  },
 	"scripts": {
 		"test": "npm run build && mocha dist/test/**/*.test.js",
 		"coverage": "nyc npm test",
@@ -25,7 +29,7 @@
 	"devDependencies": {
 		"babel-cli": "^6.24.0",
 		"babel-plugin-transform-runtime": "^6.23.0",
-		"babel-polyfill": "^6.26.0", 
+		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
 		"babel-register": "^6.26.0",
 		"code": "^5.2.4",
