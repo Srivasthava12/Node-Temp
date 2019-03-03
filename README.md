@@ -1,4 +1,4 @@
-# node-temp :dog:
+# node-temp :monkey:
 [![Build Status](https://travis-ci.com/Srivasthava12/node-temp.svg?branch=master)](https://travis-ci.com/Srivasthava12/node-temp)
 
 ## A Templete for a nodejs project
